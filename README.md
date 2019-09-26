@@ -10,4 +10,4 @@ bazel coverage src/demo/...
 ```
 failed with nogo check
 
-The nogo analyze is excluded in the config file
+The nogo analyze is excluded in the config file (nogo.json)
