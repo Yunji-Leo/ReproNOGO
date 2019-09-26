@@ -1,0 +1,12 @@
+load("@io_bazel_rules_go//go:def.bzl", "nogo")
+
+nogo(
+    name = "my_nogo",
+    config = ":nogo.json",
+    # enabling atomic, bools, buildtag, nilfunc, and printf analyzers
+    vet = True,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@org_golang_x_tools//go/analysis/passes/unreachable:go_tool_library",
+    ],
+)
